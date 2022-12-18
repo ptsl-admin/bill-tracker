@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile/{id}', function($id){
-    return response('Profile : '. $id);
+Route::get('/dashboard', function(){
+    return view('dashboard');
 });
