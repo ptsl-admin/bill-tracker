@@ -6,10 +6,11 @@
 @includeIf('/includes/header')
 @includeIf('/includes/sidebar')
 
+<div class="content-body">
+    <div class="container-fluid">
+        <p>Welcome</p>               
+    </div>
 <div>
-    <p>This is a body</p>
-</div>
 
-@includeIf('/includes/footer')
 @includeIf('/includes/wrapper_main_end')
 @includeIf('/includes/foot')
