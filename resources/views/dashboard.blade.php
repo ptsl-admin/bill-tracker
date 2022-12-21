@@ -1,5 +1,3 @@
-
-
 @includeIf('/includes/head')
 @includeIf('/includes/preloader')
 @includeIf('/includes/wrapper_main_start')

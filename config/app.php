@@ -54,8 +54,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
-
+    //'url' => env('APP_URL', 'https://ptsl-admin-special-tribble-95446qrpr74fpvpr-8000.preview.app.github.dev'),
+    'url' => 'https://ptsl-admin-special-tribble-95446qrpr74fpvpr-8000.preview.app.github.dev',
     'asset_url' => env('ASSET_URL'),
 
     /*

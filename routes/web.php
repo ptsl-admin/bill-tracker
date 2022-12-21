@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function(){
     return view('dashboard');
 });
+
+Route::get('/user', function(){
+    return view('profile', ['user' => UserController::get_user_data()]);
+})->name('user.show');
