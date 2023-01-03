@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\MonthlyBudgetController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/',[MonthlyBudgetController::class, 'show_calculator']);
 
-Route::get('/user', function(){
+/*
+Route::get('/user', function(){     
     return view('profile', ['user' => UserController::get_user_data()]);
 })->name('user.show');
 
@@ -40,3 +39,4 @@ Route::post('login', function(){
     echo 'Successfully logged in ... ';
     return redirect('/user');
 })->name('login.post');
+*/
