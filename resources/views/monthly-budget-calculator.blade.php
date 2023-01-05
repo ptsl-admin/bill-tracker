@@ -30,18 +30,18 @@
             @if ($loop->first) class="stepper-item active" 
             @else class="stepper-item"    
             @endif >
-            <a href="#{{$category['slug']}}" onclick="javascript:void(0)">
+            <a href="#{{$category['type']}}" onclick="javascript:void(0)" data-name="{{$category['name']}}">
                 <div class="step-counter">{{$index + 1}}</div>
             </a>
             </div>
         @endforeach
         </div>    
         <div class="row">  
-            <div class="col-xl-8 col-lg-8">
+            <div class="col-xl-6 col-lg-6">
                 <div class="card">
                     <div class="tab-content">
                         @foreach ($categories as $category) 
-                            <div id="{{$category['slug']}}" 
+                            <div id="{{$category['type']}}" 
                             @if ($loop->first) class="tab-pane active"
                             @else class="tab-pane" @endif
                             >
@@ -60,7 +60,7 @@
                                     
                                 </div>
                             </div>
-                        @endforeach                      
+                        @endforeach
                     </div>
                     <div class="card-footer">
                         <button id="next_category" type="button"  class="btn btn-dark ml-2 float-right">Next</button>
@@ -68,10 +68,10 @@
                     </div>
                 </div>
             </div>        
-            <div class="col-xl-4 col-lg-4">
+            <div class="col-xl-6 col-lg-6">
                 <div class="card">
                     <div class="card-body">
-                        <canvas id="category_pie_chart"></canvas>
+                        <canvas id="category_pie_chart" style="position: relative; width:100hw"></canvas>
                     </div>
                 </div>
             </div>
