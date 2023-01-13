@@ -1,5 +1,8 @@
 <?php
 
+echo 'deployed from github';
+exit();
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
